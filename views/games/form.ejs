@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Game</title>
+</head>
+<body>
+    <h1>Create Game</h1>
+
+    <form action="/games/create" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <% if (locals.errorMessage) { %>
+            <p style="color: red"><%=  errorMessage %> </p>
+        <% } %>
+        <button>Save</button>
+        <button><a href="/games">Volver</a></button>
+    </form>
+</body>
+</html>
