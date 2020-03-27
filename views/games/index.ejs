@@ -9,7 +9,7 @@
     <ul>
         <% games.forEach((game) => { %>
             <li>
-                <%= game.name %>
+                <a href="/games/update/<%= game.id %>"><%= game.name %></a>
                 <button type="button" onclick="deleteGame(<%= game.id %>)">Borrar</button>
             </li>
        <% }); %>
@@ -21,7 +21,7 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 
-    <script>
+  <!-- <script>
         function deleteGame(id) {
             console.log(id);
             $.post('/games/delete/' + id, function (){
@@ -29,6 +29,10 @@
                 window.location.reload();
             });
         }
-    </script>
+    </script>--> 
+
+    <!-- /public/javascripts/index.js-->
+    <!-- src se cargan sin incluir el public-->
+    <script src="/javascripts/index.js"></script>
 </body>
 </html>
